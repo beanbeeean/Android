@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2E7D32"
+        android:padding="20dp"
+        android:text="Raze Galactic"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintVertical_bias="0.02"
+        android:src="@drawable/space_station_icon"
+        app:layout_constraintEnd_toStartOf="@id/icon2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/icon2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/rocket_icon"
+        app:layout_constraintEnd_toStartOf="@id/icon3"
+        app:layout_constraintStart_toEndOf="@id/icon1"
+        app:layout_constraintTop_toTopOf="@id/icon1" />
+
+    <ImageView
+        android:id="@+id/icon3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/rover_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon2"
+        app:layout_constraintTop_toTopOf="@id/icon1" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Space Stations"
+        app:layout_constraintStart_toStartOf="@id/icon1"
+        app:layout_constraintEnd_toEndOf="@id/icon1"
+        app:layout_constraintTop_toBottomOf="@id/icon1" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flights"
+        app:layout_constraintStart_toStartOf="@id/icon2"
+        app:layout_constraintEnd_toEndOf="@id/icon2"
+        app:layout_constraintTop_toTopOf="@id/text1" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rovers"
+        app:layout_constraintStart_toStartOf="@id/icon3"
+        app:layout_constraintEnd_toEndOf="@id/icon3"
+        app:layout_constraintTop_toTopOf="@id/text1" />
+
+    <TextView
+        android:id="@+id/dca"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="#558B2F"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingEnd="20dp"
+        android:text="DCA"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/mars"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text1" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/double_arrows"
+        app:layout_constraintBottom_toBottomOf="@id/dca"
+        android:translationZ="1dp"
+        app:layout_constraintEnd_toEndOf="@id/mars"
+        app:layout_constraintStart_toStartOf="@id/dca"
+        app:layout_constraintTop_toTopOf="@id/dca" />
+
+    <TextView
+        android:id="@+id/mars"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:background="#558B2F"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingStart="20dp"
+        android:text="MARS"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dca"
+        app:layout_constraintTop_toTopOf="@id/dca" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/oneway"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/dca"
+        android:text="One Way"
+        android:textColor="@color/white"
+        android:background="#EF6C00"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/traveller"
+        app:layout_constraintTop_toBottomOf="@id/oneway"
+        app:layout_constraintStart_toStartOf="@id/oneway"
+        android:layout_marginTop="5dp"
+        android:text="1 Traveller"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:background="#EF6C00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:src="@drawable/rocket_icon"
+        app:layout_constraintEnd_toEndOf="@id/traveller"
+        app:layout_constraintTop_toTopOf="@id/galaxy"
+        app:layout_constraintBottom_toBottomOf="@id/galaxy"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <ImageView
+        android:id="@+id/galaxy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintTop_toBottomOf="@id/traveller"
+        android:src="@drawable/galaxy"
+        android:layout_width="130dp"
+        android:layout_height="130dp"/>
+
+    <Button
+        android:backgroundTint="#2B782F"
+        android:id="@+id/footer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="DEPART"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

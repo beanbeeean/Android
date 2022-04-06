@@ -1,0 +1,12 @@
+
+1. xml 에 직접 타이핑 하는 방식
+2. story board 에서 드래그앤 드랍 방식으로 그려 볼 수 있다. (xml이 자동으로 코딩 된다)
+
+view component 란
+
+화면을 그리는 각각의 요소
+글, 이미지, 토글버튼, 텍스트 버튼, 이미지 버튼, 로딩 바
+
+부모가 될 수 있는 view component
+- LinearLayout, ConstraintLayout
+부모가 될 수 없는 view component

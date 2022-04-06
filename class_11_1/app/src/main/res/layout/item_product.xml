@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/productImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/purple_200" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="니트 조끼"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/productImageView"
+        app:layout_constraintTop_toTopOf="@id/productImageView" />
+
+    <TextView
+        android:id="@+id/sellInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="좌동 + 2시간 전"
+        android:textColor="#7E000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/productName"
+        app:layout_constraintTop_toBottomOf="@id/productName" />
+
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="35,000원"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/productName"
+        app:layout_constraintTop_toBottomOf="@id/sellInfo" />
+
+    <View
+        android:id="@+id/goodImage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_baseline_favorite_border_24"
+        app:layout_constraintBottom_toBottomOf="@id/goodCount"
+        app:layout_constraintEnd_toStartOf="@id/goodCount"
+        app:layout_constraintTop_toTopOf="@id/goodCount" />
+
+    <TextView
+        android:id="@+id/goodCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="8"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/replyImage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_baseline_speaker_notes_24"
+        app:layout_constraintBottom_toBottomOf="@id/replyCount"
+        app:layout_constraintEnd_toStartOf="@id/replyCount"
+        app:layout_constraintTop_toTopOf="@id/replyCount" />
+
+    <TextView
+        android:id="@+id/replyCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="3"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/goodImage"
+        app:layout_constraintTop_toTopOf="@id/goodCount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
